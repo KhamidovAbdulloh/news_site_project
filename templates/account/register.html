@@ -1,0 +1,12 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %} Foydalanuvchilarni ro'yahatdan o'tkazish {% endblock title %}
+{% block content %}
+    <h2 class="text-center">Yangi foydalanuvchilarni ro'yahatdan o'tkazish</h2>
+    <p>Ro'yhatdan o'tish uchun quyidagi formani to'ldiring:</p>
+    <form method="post" action="">{% csrf_token %}
+        {{ user_form.as_p }}
+    <button type="submit" class="btn btn-success ml-2">Ro'yhatdan o'tish</button>
+    </form>
+{% endblock content %}

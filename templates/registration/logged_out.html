@@ -1,0 +1,9 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %} Logout sahifasi {% endblock title %}
+{% block content %}
+    <h2>Logout</h2>
+<p>Siz vebsaytdan chiqdingiz. | <button type="submit" class="btn btn-alert ml-2"><a href="{% url 'login %}">Qaytadan kirish</a></button></p>
+
+{% endblock content %}
