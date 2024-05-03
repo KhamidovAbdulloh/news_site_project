@@ -1,7 +1,8 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load hitcount_tags %}
-{% block title %} Xorij xabarlar {% endblock title %}
+{% block title %} {% blocktrans %}Xorij xabarlar{% endblocktrans %} {% endblock title %}
 {% block content %}
     {% for news in xorij_yangiliklar %}
         <div class="container">
@@ -10,7 +11,7 @@
                     <a href="{{ news.get_absolute_url }}">
                     <img src="{{ news.image.url }}" alt="{{ news.title }}" style="width:50%">
                     <h3>{{ news.title }}</h3>
-                    <p>Ko'rilganlar soni:<i class="fa fa-eye" aria-hidden="true"></i>{% get_hit_count for news %}</p>
+                    <p>{% blocktrans %}Ko'rilganlar soni{% endblocktrans %}:<i class="fa fa-eye" aria-hidden="true"></i>{% get_hit_count for news %}</p>
                     </a>
                 </div>
             </div>

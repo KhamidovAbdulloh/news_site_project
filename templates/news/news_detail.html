@@ -1,24 +1,25 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load hitcount_tags %}
 
 {% block title %} {{ news.title }} {% endblock title %}
 
 {% block content %}
     <h2>{{ news.title }}</h2>
-    <h5>Published date: {{ news.publish_time }} <i class="fa fa-eye" aria-hidden="true"></i>{% get_hit_count for news %} | Izohlar soni: {{ comments_count }}</h5>
+    <h5>Published date: {{ news.publish_time }} <i class="fa fa-eye" aria-hidden="true"></i>{% get_hit_count for news %} | {% blocktrans %}Izohlar soni{% endblocktrans %}: {{ comments_count }}</h5>
     <img src="{{ news.image.url }}" alt="">
     <p>{{ news.body }}</p>
 {% if request.user.is_authenticated and request.user.is_superuser %}
 <div class="card-footer text-center">
-    <button class="btn btn-info"><a href="{% url 'news_update' news.slug %}">Tahrirlash</a> </button> |
-    <button class="btn btn-danger"><a href="{% url 'news_delete' news.slug %}">O'chirish</a> </button>
+    <button class="btn btn-info"><a href="{% url 'news_update' news.slug %}">{% blocktrans %}Tahrirlash{% endblocktrans %}</a> </button> |
+    <button class="btn btn-danger"><a href="{% url 'news_delete' news.slug %}">{% blocktrans %}O'chirish{% endblocktrans %}</a> </button>
 </div>
 {% endif %} <br>
 {% if comments %}
-<h3>Bu yangilikka {{ comments_count }} ta izoh qoldirilgan</h3>
+<h3>{% blocktrans %}Bu yangilikka{% endblocktrans %} {{ comments_count }} {% blocktrans %}ta izoh qoldirilgan{% endblocktrans %}</h3>
 {% else %}
-<h3>O'z izohingizni qoldiring</h3>
+<h3>{% blocktrans %}O'z izohingizni qoldiring{% endblocktrans %}</h3>
 {% endif %}
 {% for comment in comments %}
     <div class="comments" style="padding: 10px">
@@ -34,20 +35,20 @@
 {% if user.is_authenticated %}
 <div class="col-md-8 card mb-4 mt-3">
     <div class="card-body">
-        <h3>Izoh qoldirish</h3>
+        <h3>{% blocktrans %}Izoh qoldirish{% endblocktrans %}</h3>
         <form method="POST" style="margin-top: 1.3em" action="">{% csrf_token %}
             {{ comment_form.as_p }}
             <button type="submit" class="btn btn-primary btn-lg">
-                Yuborish
+                {% blocktrans %}Yuborish{% endblocktrans %}
             </button>
         </form>
     </div>
 </div>
 {% else %}
     <div class="card-body">
-        <p class="text-danger">Faqatgina ro'yhatdan o'tgan foydalanuvchilar izoh qoldirishi mumkin</p>
-        <p>Izoh qoldirish uchun
-            <a href="{% url 'user_register' %}" class="text-submit">ro'yhatdan o'ting</a> yoki <a href="{% url 'login' %}">saytga kiring</a>
+        <p class="text-danger">{% blocktrans %}Faqatgina ro'yhatdan o'tgan foydalanuvchilar izoh qoldirishi mumkin{% endblocktrans %}</p>
+        <p>{% blocktrans %}Izoh qoldirish uchun{% endblocktrans %}
+            <a href="{% url 'user_register' %}" class="text-submit">{% blocktrans %}ro'yhatdan o'ting{% endblocktrans %}</a> {% blocktrans %}yoki{% endblocktrans %} <a href="{% url 'login' %}">{% blocktrans %}saytga kiring{% endblocktrans %}</a>
         </p>
     </div>
 {% endif %}

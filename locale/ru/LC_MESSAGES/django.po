@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-03 15:51+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\news_site\settings.py:123
+#, fuzzy
+#| msgid "O'zbek"
+msgid "Uzbek"
+msgstr "Узбекский"
+
+#: .\news_site\settings.py:124
+#, fuzzy
+#| msgid "Inglis"
+msgid "English"
+msgstr "Англиский"
+
+#: .\news_site\settings.py:125
+msgid "Rus"
+msgstr "Русский"
+
+#: .\templates\news\base.html:34 .\templates\news\base.html:83
+#, fuzzy
+#| msgid "Bosh sahifa"
+msgid "Bosh sahifa"
+msgstr "Главная страница"
+
+#: .\templates\news\base.html:35
+msgid "Biz haqimizda"
+msgstr "О нас"
+
+#: .\templates\news\base.html:36 .\templates\news\base.html:155
+msgid "Kontakt"
+msgstr "Контакт"
+
+#: .\templates\news\base.html:38
+msgid "Admin sahifasi"
+msgstr "Админ страница"
+
+#: .\templates\news\base.html:59
+msgid "Chiqish"
+msgstr "Выйти"
+
+#: .\templates\news\base.html:60
+msgid "Mening profilim"
+msgstr "Мой профиль"
+
+#: .\templates\news\base.html:62
+msgid "Saytga kirish"
+msgstr "Вход к сайту"
+
+#: .\templates\news\base.html:79
+msgid "Navigatsiyani almashtirish"
+msgstr "Переключение навигации"
+
+#: .\templates\news\base.html:84 .\templates\news\home.html:53
+msgid "Mahalliy"
+msgstr "Местные новости"
+
+#: .\templates\news\base.html:85 .\templates\news\home.html:87
+msgid "Xorij"
+msgstr "Иностранныу новости"
+
+#: .\templates\news\base.html:86 .\templates\news\home.html:117
+msgid "Texnologiya"
+msgstr "Технологические новости"
+
+#: .\templates\news\base.html:87 .\templates\news\home.html:183
+msgid "Sport"
+msgstr "Спорт новости"
+
+#: .\templates\news\base.html:88
+msgid "Futbol"
+msgstr ""
+
+#: .\templates\news\base.html:89
+msgid "Tenis"
+msgstr "Тенис"
+
+#: .\templates\news\base.html:90
+msgid "Boks"
+msgstr "Бокс"
+
+#: .\templates\news\base.html:91
+msgid "MMA"
+msgstr "ММА"
+
+#: .\templates\news\base.html:92
+msgid "Boshqalar"
+msgstr "Другие"
+
+#: .\templates\news\base.html:95
+msgid "Biz bilan bo'lanish"
+msgstr "Связаться с нами"
+
+#: .\templates\news\base.html:96
+msgid "404 Sahifa"
+msgstr "404 страница"
+
+#: .\templates\news\base.html:109 .\templates\news\home.html:28
+msgid "So'ngi yangiliklar"
+msgstr "Последние новости "
+
+#: .\templates\news\base.html:140 .\templates\news\home.html:148
+msgid "Rasmlar"
+msgstr "Картинки"
+
+#: .\templates\news\base.html:145
+#, fuzzy
+#| msgid "Barcha kategoriyalar"
+msgid "Kategoriyalar"
+msgstr "Категории"
+
+#: .\templates\news\base.html:157
+msgid ""
+"Toshkent shahar, Uchtepa tumani, FFF kochasi 77-uy, telefon: +99899 999 99 "
+"99, O'zbekiston."
+msgstr "Г. Ташкент, Учтепинский район, ул. Ф. Ф. 77, телефон: +99899 999 99 "
+"99, Узбекистан."
+
+#: .\templates\news\home.html:7
+msgid " Bosh sahifa "
+msgstr "Главная страница"
+
+#: .\templates\news\home.html:19 .\templates\news\home.html:36
+#: .\templates\news\home.html:62 .\templates\news\home.html:76
+#: .\templates\news\home.html:95 .\templates\news\home.html:107
+#: .\templates\news\home.html:125 .\templates\news\home.html:137
+#: .\templates\news\home.html:192 .\templates\news\home.html:206
+msgid "Ko'rilganlar soni:"
+msgstr "Количество просмотров"
+
+#: .\templates\news\home.html:220
+msgid "Ommabop"
+msgstr "Популярные новости"
+
+#: .\templates\news\home.html:290
+msgid "Sponsor"
+msgstr "Спонсор"
+
+#: .\templates\news\home.html:293
+msgid "Barcha kategoriyalar"
+msgstr "Все категории"
+
+#: .\templates\news\home.html:295
+msgid "Kategoriyani tanlang"
+msgstr "Выберите категорию"
+
+#: .\templates\news\home.html:302
+msgid "Linklar"
+msgstr "Ссылки"
+
+#: .\templates\news\mahalliy.html:5
+#, fuzzy
+#| msgid "Mahalliy"
+msgid "Mahalliy xabarlar"
+msgstr "Местные новости"
+
+#: .\templates\news\mahalliy.html:14 .\templates\news\sport.html:14
+#: .\templates\news\texnologiya.html:14 .\templates\news\xorij.html:14
+#, fuzzy
+#| msgid "Ko'rilganlar soni:"
+msgid "Ko'rilganlar soni"
+msgstr "Количество просмотров"
+
+#: .\templates\news\news_detail.html:10
+#, fuzzy
+#| msgid "Ko'rilganlar soni:"
+msgid "Izohlar soni"
+msgstr "Количество комментариев"
+
+#: .\templates\news\news_detail.html:15
+msgid "Tahrirlash"
+msgstr "Править"
+
+#: .\templates\news\news_detail.html:16
+msgid "O'chirish"
+msgstr "Удалить"
+
+#: .\templates\news\news_detail.html:20
+#, fuzzy
+#| msgid "So'ngi yangiliklar"
+msgid "Bu yangilikka"
+msgstr "К этой новости "
+
+#: .\templates\news\news_detail.html:20
+msgid "ta izoh qoldirilgan"
+msgstr "оставленных комментариев"
+
+#: .\templates\news\news_detail.html:22
+msgid "O'z izohingizni qoldiring"
+msgstr "Оставьте свой комментарий"
+
+#: .\templates\news\news_detail.html:38
+msgid "Izoh qoldirish"
+msgstr "Оставить комментарий"
+
+#: .\templates\news\news_detail.html:42
+msgid "Yuborish"
+msgstr "Отправить"
+
+#: .\templates\news\news_detail.html:49
+msgid "Faqatgina ro'yhatdan o'tgan foydalanuvchilar izoh qoldirishi mumkin"
+msgstr "Оставлять комментарии могут только зарегистрированные пользователи"
+
+#: .\templates\news\news_detail.html:50
+msgid "Izoh qoldirish uchun"
+msgstr "Оставить комментарий"
+
+#: .\templates\news\news_detail.html:51
+msgid "ro'yhatdan o'ting"
+msgstr "зарегистрироваться"
+
+#: .\templates\news\news_detail.html:51
+msgid "yoki"
+msgstr "или"
+
+#: .\templates\news\news_detail.html:51
+msgid "saytga kiring"
+msgstr "зайти на сайт"
+
+#: .\templates\news\sport.html:5
+msgid "Sport xabarlar"
+msgstr "Спорт новости"
+
+#: .\templates\news\texnologiya.html:5
+#, fuzzy
+#| msgid "Texnologiya"
+msgid "Texnologiya xabarlar"
+msgstr "Технологические новости"
+
+#: .\templates\news\xorij.html:5
+msgid "Xorij xabarlar"
+msgstr "Иностранные новости"
+
+#~ msgid "Rus"
+#~ msgstr "Русский"

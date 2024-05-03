@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-03 15:51+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\news_site\settings.py:123
+#, fuzzy
+#| msgid "O'zbek"
+msgid "Uzbek"
+msgstr "Uzbek"
+
+#: .\news_site\settings.py:124
+#, fuzzy
+#| msgid "Inglis"
+msgid "English"
+msgstr "English"
+
+#: .\news_site\settings.py:125
+msgid "Rus"
+msgstr "Russian"
+
+#: .\templates\news\base.html:34 .\templates\news\base.html:83
+#, fuzzy
+#| msgid " Bosh sahifa "
+msgid "Bosh sahifa"
+msgstr "Home Page"
+
+#: .\templates\news\base.html:35
+msgid "Biz haqimizda"
+msgstr "About us"
+
+#: .\templates\news\base.html:36 .\templates\news\base.html:155
+msgid "Kontakt"
+msgstr "Contact"
+
+#: .\templates\news\base.html:38
+msgid "Admin sahifasi"
+msgstr "Admin page"
+
+#: .\templates\news\base.html:59
+msgid "Chiqish"
+msgstr "Logout"
+
+#: .\templates\news\base.html:60
+msgid "Mening profilim"
+msgstr "My profile"
+
+#: .\templates\news\base.html:62
+msgid "Saytga kirish"
+msgstr "Access to the site"
+
+#: .\templates\news\base.html:79
+msgid "Navigatsiyani almashtirish"
+msgstr "Toggle navigation"
+
+#: .\templates\news\base.html:84 .\templates\news\home.html:53
+msgid "Mahalliy"
+msgstr "Local news"
+
+#: .\templates\news\base.html:85 .\templates\news\home.html:87
+msgid "Xorij"
+msgstr "Foreign news"
+
+#: .\templates\news\base.html:86 .\templates\news\home.html:117
+msgid "Texnologiya"
+msgstr "Technology news"
+
+#: .\templates\news\base.html:87 .\templates\news\home.html:183
+msgid "Sport"
+msgstr "Sport news"
+
+#: .\templates\news\base.html:88
+msgid "Futboll"
+msgstr "Football"
+
+#: .\templates\news\base.html:89
+msgid "Tenis"
+msgstr "Tenis"
+
+#: .\templates\news\base.html:90
+msgid "Boks"
+msgstr "Box"
+
+#: .\templates\news\base.html:91
+msgid "MMA"
+msgstr "MMA"
+
+#: .\templates\news\base.html:92
+msgid "Boshqalar"
+msgstr "Others"
+
+#: .\templates\news\base.html:95
+msgid "Biz bilan bog'lanish"
+msgstr "Contact us"
+
+#: .\templates\news\base.html:96
+msgid "404 Sahifa"
+msgstr "404 page"
+
+#: .\templates\news\base.html:109 .\templates\news\home.html:28
+msgid "So'ngi yangiliklar"
+msgstr "Latest news"
+
+#: .\templates\news\base.html:140 .\templates\news\home.html:148
+msgid "Rasmlar"
+msgstr "Photos"
+
+#: .\templates\news\base.html:145
+#, fuzzy
+#| msgid "Barcha kategoriyalar"
+msgid "Kategoriyalar"
+msgstr "All categories"
+
+#: .\templates\news\base.html:157
+msgid ""
+"Toshkent shahar, Uchtepa tumani, FFF kochasi 77-uy, telefon: +99899 999 99 "
+"99, O'zbekiston."
+msgstr "Tashkent City, Uchtepa district, fff street 77, telephone: +99899 999 "
+"99, Uzbekistan."
+
+#: .\templates\news\home.html:7
+msgid "Bosh sahifa"
+msgstr "Home Page"
+
+#: .\templates\news\home.html:19 .\templates\news\home.html:36
+#: .\templates\news\home.html:62 .\templates\news\home.html:76
+#: .\templates\news\home.html:95 .\templates\news\home.html:107
+#: .\templates\news\home.html:125 .\templates\news\home.html:137
+#: .\templates\news\home.html:192 .\templates\news\home.html:206
+msgid "Ko'rilganlar soni:"
+msgstr "Views count"
+
+#: .\templates\news\home.html:220
+msgid "Ommabop"
+msgstr "Popular news"
+
+#: .\templates\news\home.html:290
+msgid "Sponsor"
+msgstr "Sponsor"
+
+#: .\templates\news\home.html:293
+msgid "Barcha kategoriyalar"
+msgstr "All categories"
+
+#: .\templates\news\home.html:295
+msgid "Kategoriyani tanlang"
+msgstr "Choose category"
+
+#: .\templates\news\home.html:302
+msgid "Linklar"
+msgstr "Links"
+
+#: .\templates\news\mahalliy.html:5
+#, fuzzy
+#| msgid "Mahalliy"
+msgid "Mahalliy xabarlar"
+msgstr "Local news"
+
+#: .\templates\news\mahalliy.html:14 .\templates\news\sport.html:14
+#: .\templates\news\texnologiya.html:14 .\templates\news\xorij.html:14
+#, fuzzy
+#| msgid "Ko'rilganlar soni:"
+msgid "Ko'rilganlar soni"
+msgstr "Views count"
+
+#: .\templates\news\news_detail.html:10
+#, fuzzy
+#| msgid "Ko'rilganlar soni:"
+msgid "Izohlar soni"
+msgstr "Comments count"
+
+#: .\templates\news\news_detail.html:15
+msgid "Tahrirlash"
+msgstr "Edit"
+
+#: .\templates\news\news_detail.html:16
+msgid "O'chirish"
+msgstr "Delete"
+
+#: .\templates\news\news_detail.html:20
+#, fuzzy
+#| msgid "So'ngi yangiliklar"
+msgid "Bu yangilikka"
+msgstr "To this news"
+
+#: .\templates\news\news_detail.html:20
+msgid "ta izoh qoldirilgan"
+msgstr "6 footnotes omitted"
+
+#: .\templates\news\news_detail.html:22
+msgid "O'z izohingizni qoldiring"
+msgstr "Leave your comment"
+
+#: .\templates\news\news_detail.html:38
+msgid "Izoh qoldirish"
+msgstr "Leave a comment"
+
+#: .\templates\news\news_detail.html:42
+msgid "Yuborish"
+msgstr "Send"
+
+#: .\templates\news\news_detail.html:49
+msgid "Faqatgina ro'yhatdan o'tgan foydalanuvchilar izoh qoldirishi mumkin"
+msgstr "Only registered users can leave comments"
+
+#: .\templates\news\news_detail.html:50
+msgid "Izoh qoldirish uchun"
+msgstr "To leave a comment"
+
+#: .\templates\news\news_detail.html:51
+msgid "ro'yhatdan o'ting"
+msgstr "register"
+
+#: .\templates\news\news_detail.html:51
+msgid "yoki"
+msgstr "or"
+
+#: .\templates\news\news_detail.html:51
+msgid "saytga kiring"
+msgstr "access the site"
+
+#: .\templates\news\sport.html:5
+msgid "Sport xabarlar"
+msgstr "Sports news"
+
+#: .\templates\news\texnologiya.html:5
+#, fuzzy
+#| msgid "Texnologiya"
+msgid "Texnologiya xabarlar"
+msgstr "Technology news"
+
+#: .\templates\news\xorij.html:5
+msgid "Xorij xabarlar"
+msgstr "Foreign news"
+
+#~ msgid "Rus"
+#~ msgstr "Russian"

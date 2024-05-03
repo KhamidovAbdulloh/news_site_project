@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
 <html>
 <head>
 <meta charset="utf-8">
@@ -30,20 +31,35 @@
         <div class="header_top">
           <div class="header_top_left">
             <ul class="top_nav">
-              <li><a href="{% url 'home_page' %}">Bosh sahifa</a></li>
-              <li><a href="{% url 'about_page' %}">Biz haqimizda</a></li>
-              <li><a href="{% url 'contact_page' %}">Kontakt</a></li>
+              <li><a href="{% url 'home_page' %}">{% blocktrans %}Bosh sahifa{% endblocktrans %}</a></li>
+              <li><a href="{% url 'about_page' %}">{% blocktrans %}Biz haqimizda{% endblocktrans %}</a></li>
+              <li><a href="{% url 'contact_page' %}">{% blocktrans %}Kontakt{% endblocktrans %}</a></li>
               {% if user.is_authenticated and user.is_superuser %}
-              <li><a href="{% url 'admin_page' %}">Admin sahifasi</a></li>
+              <li><a href="{% url 'admin_page' %}">{% blocktrans %}Admin sahifasi{% endblocktrans %}</a></li>
               {% endif %}
+
+            <li><form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+              <input name="next" type="hidden" value="{{ redirect_to }}">
+              <select name="language">
+                  {% get_current_language as LANGUAGE_CODE %}
+                  {% get_available_languages as LANGUAGES %}
+                  {% get_language_info_list for LANGUAGES as languages %}
+                  {% for language in languages %}
+                      <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                          {{ language.name_local }} ({{ language.code }})
+                      </option>
+                  {% endfor %}
+              </select>
+              <input type="submit" value="Go">
+            </form></li>
             </ul>
           </div>
           <div class="header_top_right">
             {% if request.user.is_authenticated %}
-            <p><a href="{% url 'logout' %}" style="color:palegreen">Logout</a></p>
-            <p><a href="{% url 'user_profile' %}" style="color:yellow">My profile</a></p>
+            <p><a href="{% url 'logout' %}" style="color:palegreen">{% blocktrans %}Logout{% endblocktrans %}</a></p>
+            <p><a href="{% url 'user_profile' %}" style="color:yellow">{% blocktrans %}My profile{% endblocktrans %}</a></p>
             {% else %}
-            <p><a href="{% url 'login' %}" style="color:yellow">Saytga kirish</a></p>
+            <p><a href="{% url 'login' %}" style="color:yellow">{% blocktrans %}Saytga kirish{% endblocktrans %}</a></p>
             {% endif %}
             <p>{% now 'jS F Y H:i '%}</p>
           </div>
@@ -60,24 +76,24 @@
   <section id="navArea">
     <nav class="navbar navbar-inverse" role="navigation">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">{% blocktrans %}Toggle navigation{% endblocktrans %}</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav main_nav">
-          <li class="active"><a href="{% url 'home_page' %}"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Bosh sahifa</span></a></li>
-          <li><a href="{% url 'local_news_page' %}">Mahalliy</a></li>
-          <li> <a href="{% url 'foreign_news_page' %}" >Xorij</a></li>
-          <li><a href="{% url 'technology_news_page' %}">Texnologiya</a></li>
-          <li class="dropdown"><a href="{% url 'sport_news_page' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sport</a><ul class="dropdown-menu" role="menu">
-              <li><a href="#">Football</a></li>
-              <li><a href="#">Tenis</a></li>
-              <li><a href="#">Boks</a></li>
-              <li><a href="#">MMA</a></li>
-              <li><a href="#">Boshqalar</a></li>
+          <li class="active"><a href="{% url 'home_page' %}"><span class="fa fa-home desktop-home"></span><span class="mobile-show">{% blocktrans %}Bosh sahifa{% endblocktrans %}</span></a></li>
+          <li><a href="{% url 'local_news_page' %}">{% blocktrans %}Mahalliy{% endblocktrans %}</a></li>
+          <li> <a href="{% url 'foreign_news_page' %}" >{% blocktrans %}Xorij{% endblocktrans %}</a></li>
+          <li><a href="{% url 'technology_news_page' %}">{% blocktrans %}Texnologiya{% endblocktrans %}</a></li>
+          <li class="dropdown"><a href="{% url 'sport_news_page' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{% blocktrans %}Sport{% endblocktrans %}</a><ul class="dropdown-menu" role="menu">
+              <li><a href="{% url 'sport_news_page' %}">{% blocktrans %}Football{% endblocktrans %}</a></li>
+              <li><a href="{% url 'sport_news_page' %}">{% blocktrans %}Tenis{% endblocktrans %}</a></li>
+              <li><a href="{% url 'sport_news_page' %}">{% blocktrans %}Boks{% endblocktrans %}</a></li>
+              <li><a href="{% url 'sport_news_page' %}">{% blocktrans %}MMA{% endblocktrans %}</a></li>
+              <li><a href="{% url 'sport_news_page' %}">{% blocktrans %}Boshqalar{% endblocktrans %}</a></li>
             </ul>
           </li>
-          <li><a href="{% url 'contact_page' %}">Biz bilan bo'lanish</a></li>
-          <li><a href="{% url '404_page' %}">404 Sahifa</a></li>
+          <li><a href="{% url 'contact_page' %}">{% blocktrans %}Biz bilan bo'lanish{% endblocktrans %}</a></li>
+          <li><a href="{% url '404_page' %}">{% blocktrans %}404 Sahifa{% endblocktrans %}</a></li>
           <li>
             <form action="{% url 'search_result' %}" method="get">
               <input type="search" name="q" placeholder="Qidiruv..." class="form-control">
@@ -90,7 +106,7 @@
   <section id="newsSection">
     <div class="row">
       <div class="col-lg-12 col-md-12">
-        <div class="latest_newsarea"> <span>So'ngi yangiliklar</span>
+        <div class="latest_newsarea"> <span>{% blocktrans %}So'ngi yangiliklar{% endblocktrans %}</span>
           <ul id="ticker01" class="news_sticker">
             {% for news in latest_news %}
             <li><a href="#"><img src="{{ news.image.url }}" alt="">{{ news.title }} </a></li>
@@ -121,12 +137,12 @@
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4">
           <div class="footer_widget wow fadeInLeftBig">
-            <h2>Rasmlar</h2>
+            <h2>{% blocktrans %}Rasmlar{% endblocktrans %}</h2>
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
           <div class="footer_widget wow fadeInDown">
-            <h2>Kategoriyalar</h2>
+            <h2>{% blocktrans %}Kategoriyalar{% endblocktrans %}</h2>
             <ul class="tag_nav">
               {% for category in categories %}
               <li><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></li>
@@ -136,9 +152,9 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
           <div class="footer_widget wow fadeInRightBig">
-            <h2>Kontakt</h2>
+            <h2>{% blocktrans %}Kontakt{% endblocktrans %}</h2>
             <address>
-              Toshkent shahar, Uchtepa tumani, FFF kochasi 77-uy, telefon: +99899 999 99 99, O'zbekiston.
+              {% blocktrans %}Toshkent shahar, Uchtepa tumani, FFF kochasi 77-uy, telefon: +99899 999 99 99, O'zbekiston.{% endblocktrans %}
             </address>
           </div>
         </div>
